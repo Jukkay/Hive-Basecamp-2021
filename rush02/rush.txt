@@ -1,0 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jylimaul <jylimaul@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/24 12:47:05 by jylimaul          #+#    #+#             */
+/*   Updated: 2021/07/24 16:54:32 by jylimaul         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_list.h"
+#include <stdio.h>
+
+int main(void)
+{
+	char *stdin;
+	char *str;
+	int i;
+	
+	stdin = malloc(sizeof(BUF_SIZE + 1));
+	str = read_pipeline(stdin);
+		i = 0;
+	while (str[i] != '\0')
+	{
+		printf("%c", str[i]);
+		i++;
+	}
+	free(stdin);
+	return (0);
+}
